@@ -105,9 +105,6 @@ st.markdown("""
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    font-family: 'Roboto', sans-serif !important; /* Standardize font */
-    font-size: 14px !important;
-    font-weight: 400 !important;
 }
 .copy-button, [data-testid="copy-button"], [title="Copy to clipboard"], [data-testid="stTextArea"] {
     display: none !important;
@@ -129,7 +126,7 @@ st.markdown("""
     background-color: #ffffff;
     padding: 10px;
     text-align: center;
-    pointer-events: none;
+    pointer-events: none; /* Disable hover interactions */
 }
 .fixed-header a {
     pointer-events: none !important;
@@ -139,31 +136,6 @@ st.markdown("""
 }
 .stApp {
     padding-top: 100px;
-}
-/* Standardize font for all text elements */
-body, p, div, span, h1, h2, h3, h4, h5, h6, table, th, td, .stMarkdown, .stDataFrame {
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    color: #333 !important;
-}
-/* Ensure table headers and data use the same font */
-[data-testid="stTable"] th, [data-testid="stTable"] td {
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-/* Ensure expander content uses the same font */
-.st-expander, .st-expander * {
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-/* Ensure code blocks (SQL query) use a consistent font */
-code, pre {
-    font-family: 'Roboto Mono', monospace !important;
-    font-size: 13px !important;
-    font-weight: 400 !important;
 }
 </style>
 """, unsafe_allow_html=True)
