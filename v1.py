@@ -88,6 +88,7 @@ if "show_history" not in st.session_state:
     st.session_state.show_history = False  # Toggle for history visibility
 
 # --- CSS Styling ---
+# --- CSS Styling ---
 st.markdown("""
 <style>
 #MainMenu, header, footer {visibility: hidden;}
@@ -105,6 +106,19 @@ st.markdown("""
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    font-family: 'Roboto', sans-serif !important; /* Consistent font for chat messages */
+    font-size: 16px !important; /* Consistent font size */
+    line-height: 1.5 !important; /* Consistent line spacing */
+}
+[data-testid="stDataFrame"] {
+    font-family: 'Roboto', sans-serif !important; /* Match font with chat messages */
+    font-size: 16px !important; /* Match font size */
+    line-height: 1.5 !important; /* Match line spacing */
+}
+[data-testid="stDataFrame"] th, [data-testid="stDataFrame"] td {
+    font-family: 'Roboto', sans-serif !important; /* Ensure table headers and cells match */
+    font-size: 16px !important;
+    text-align: left !important; /* Align text for better readability */
 }
 .copy-button, [data-testid="copy-button"], [title="Copy to clipboard"], [data-testid="stTextArea"] {
     display: none !important;
